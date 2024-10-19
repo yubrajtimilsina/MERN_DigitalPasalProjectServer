@@ -3,10 +3,10 @@
 import  Express  from "express";
 import UserController from "../controllers/userController";
 
-const router = express.Router()
+const router = Express.Router()
 
 //router.post("/register",UserController.register)
 
-router.route
+router.route("/register").post(UserController.register)
 
 export default router

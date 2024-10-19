@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import User from "../database/models/userModel";
+import sequelize from "../database/connection";
 
 class UserController{
   static async register(req:Request,res:Response){
@@ -24,7 +25,6 @@ class UserController{
     }
 }
 
-const user = new UserController()
 
-export default user
+export default UserController
 
