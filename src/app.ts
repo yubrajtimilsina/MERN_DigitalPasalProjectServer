@@ -1,10 +1,8 @@
 import express from 'express'
 
-const app = express()
-
 import'./database/connection'
 import userRoute from './routes/userRoutes'
-
+const app = express()
 app.use(express.json())
 app.use("/api/auth",userRoute)
 
