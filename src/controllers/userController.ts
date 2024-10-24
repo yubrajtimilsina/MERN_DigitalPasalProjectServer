@@ -65,6 +65,18 @@ class UserController{
         }
 
     }
+    async handleForgetPassword(req:Request,res:Response){
+        const {email} = req.body
+        if(!email) 
+            return res.status(400).json({message:"Please provide email"})
+
+        const [user] = await User.findAll({
+            where :{
+
+            }
+
+        })
+    }
 }
 
 
